@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "declaration": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": [
+      "@nuxt/types"
+    ]
+  },
+  "exclude": [
+    "**/dist/**",
+    "**/.output/**"
+  ]
+}

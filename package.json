@@ -1,0 +1,57 @@
+{
+  "name": "@nuxt3/apollo-module",
+  "version": "0.0.6",
+  "description": "Nuxt module for Apollo client",
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "apollo",
+    "nuxt-module",
+    "apollo-module",
+    "apollo-client"
+  ],
+  "homepage": "https://github.com/newbeea/nuxt3-apollo-module#readme",
+  "bugs": {
+    "url": "https://github.com/newbeea/nuxt3-apollo-module/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newbeea/nuxt3-apollo-module.git"
+  },
+  "license": "MIT",
+  "author": "Phil xu <xupengfei2010@gmail.com>",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./plugin": {
+      "require": "./dist/plugin.cjs",
+      "import": "./dist/plugin.mjs"
+    }
+  },
+  "main": "./index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.cjs"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.5",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "@nuxt/types": "^2.15.8",
+    "@vue/apollo-composable": "^4.0.0-alpha.16",
+    "pathe": "^0.2.0",
+    "unbuild": "^0.6.3",
+    "vue-apollo": "^3.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "npm:@nuxt/schema-edge@latest"
+  }
+}
