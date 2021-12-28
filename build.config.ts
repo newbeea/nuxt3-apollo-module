@@ -3,7 +3,7 @@ import { defineBuildConfig } from 'unbuild'
 export default defineBuildConfig({
   entries: [
     './src/index',
-    "./src/plugin",
+    './src/plugin',
   ],
   clean: true,
   declaration: true,

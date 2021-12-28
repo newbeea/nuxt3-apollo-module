@@ -43,15 +43,15 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.5",
-    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "@apollo/client": "^3.5.6",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@3.0.0-27338323.1e98259",
     "@nuxt/types": "^2.15.8",
     "@vue/apollo-composable": "^4.0.0-alpha.16",
-    "pathe": "^0.2.0",
-    "unbuild": "^0.6.3",
-    "vue-apollo": "^3.1.0"
+    "consola": "^2.15.3",
+    "pathe": "^0.2.0"
   },
   "devDependencies": {
-    "@nuxt/schema": "npm:@nuxt/schema-edge@latest"
+    "@nuxt/schema": "npm:@nuxt/schema-edge@3.0.0-27338323.1e98259",
+    "unbuild": "0.5.11"
   }
 }
