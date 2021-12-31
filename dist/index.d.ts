@@ -1,7 +1,9 @@
 import * as _nuxt_schema from '@nuxt/schema';
+import { ApolloClientOptions } from '@apollo/client/core';
 
 interface ApolloModuleOptions {
-    uri: string;
+    default: Partial<ApolloClientOptions<any>>;
+    [name: string]: Partial<ApolloClientOptions<any>>;
 }
 declare const _default: _nuxt_schema.NuxtModule<ApolloModuleOptions>;
 

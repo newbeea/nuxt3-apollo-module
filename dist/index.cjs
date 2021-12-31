@@ -9,7 +9,9 @@ const index = kit.defineNuxtModule({
     name: "@nuxt3/apollo-module",
     configKey: "apollo"
   },
-  setup(options) {
+  setup(options, nuxt) {
+    nuxt.options.build.transpile = nuxt.options.build.transpile || [];
+    nuxt.options.build.transpile.push("@apollo/client", "ts-invariant/process");
     const __dirname__ = pathe.dirname(url.fileURLToPath((typeof document === 'undefined' ? new (require('u' + 'rl').URL)('file:' + __filename).href : (document.currentScript && document.currentScript.src || new URL('index.cjs', document.baseURI).href))));
     kit.addTemplate({
       filename: "apollo.options.mjs",

@@ -7,7 +7,9 @@ const index = defineNuxtModule({
     name: "@nuxt3/apollo-module",
     configKey: "apollo"
   },
-  setup(options) {
+  setup(options, nuxt) {
+    nuxt.options.build.transpile = nuxt.options.build.transpile || [];
+    nuxt.options.build.transpile.push("@apollo/client", "ts-invariant/process");
     const __dirname__ = dirname(fileURLToPath(import.meta.url));
     addTemplate({
       filename: "apollo.options.mjs",

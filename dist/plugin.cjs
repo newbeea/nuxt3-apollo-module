@@ -9,30 +9,34 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 const apolloOptions__default = /*#__PURE__*/_interopDefaultLegacy(apolloOptions);
 
+const apolloModuleOptions = apolloOptions__default;
 const plugin = _app.defineNuxtPlugin((nuxt) => {
-  const httpLink = core.createHttpLink({
-    uri: apolloOptions__default.uri
-  });
-  let apolloClient;
-  const cache = new core.InMemoryCache();
-  if (process.server) {
-    apolloClient = new core.ApolloClient({
-      ssrMode: true,
-      link: httpLink,
-      cache: new core.InMemoryCache()
-    });
-    nuxt.hook("app:rendered", () => {
-      nuxt.payload.data["apollo"] = apolloClient.extract();
-    });
-  } else {
-    cache.restore(nuxt.payload.data["apollo"]);
-    apolloClient = new core.ApolloClient({
-      link: httpLink,
-      cache
-    });
+  const apolloClients = {};
+  for (const key in apolloModuleOptions) {
+    const httpLink = core.createHttpLink(apolloModuleOptions[key]);
+    const cache = new core.InMemoryCache();
+    if (process.server) {
+      const apolloClient = new core.ApolloClient(Object.assign(apolloModuleOptions[key], {
+        ssrMode: true,
+        link: httpLink,
+        cache: new core.InMemoryCache()
+      }));
+      nuxt.hook("app:rendered", () => {
+        nuxt.payload.data["apollo-" + key] = apolloClient.extract();
+      });
+      apolloClients[key] = apolloClient;
+    } else {
+      cache.restore(JSON.parse(JSON.stringify(nuxt.payload.data["apollo-" + key])));
+      const apolloClient = new core.ApolloClient(Object.assign(apolloModuleOptions[key], {
+        link: httpLink,
+        cache,
+        ssrForceFetchDelay: 100
+      }));
+      apolloClients[key] = apolloClient;
+    }
   }
-  apolloComposable.provideApolloClient(apolloClient);
-  nuxt.provide("apollo", { DefaultApolloClient: apolloComposable.DefaultApolloClient, apolloClient });
+  nuxt.vueApp.provide(apolloComposable.ApolloClients, apolloClients);
+  nuxt.provide("apollo", apolloClients);
 });
 
 module.exports = plugin;
