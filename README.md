@@ -1,6 +1,6 @@
 # @nuxt3/apollo-module
 
-Nuxt module for Apollo
+Apollo module for nuxt3
 
 ## Demo
 [nuxt3-apollo-starter](https://github.com/newbeea/nuxt3-apollo-starter)
