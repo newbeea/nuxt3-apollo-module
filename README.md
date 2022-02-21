@@ -2,7 +2,8 @@
 
 Nuxt module for Apollo
 
-## example 
+## Demo
+[nuxt3-apollo-starter](https://github.com/newbeea/nuxt3-apollo-starter)
 
 ## Installation
 
