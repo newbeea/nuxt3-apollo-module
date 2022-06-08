@@ -7,6 +7,7 @@ specifiers:
   '@nuxt/types': ^2.15.8
   '@vue/apollo-composable': ^4.0.0-alpha.16
   consola: ^2.15.3
+  cookie-es: ^0.5.0
   pathe: ^0.2.0
   unbuild: 0.5.11
 
@@ -16,6 +17,7 @@ dependencies:
   '@nuxt/types': 2.15.8
   '@vue/apollo-composable': 4.0.0-alpha.16_@apollo+client@3.5.6
   consola: 2.15.3
+  cookie-es: 0.5.0
   pathe: 0.2.0
 
 devDependencies:
@@ -696,6 +698,10 @@ packages:
   /consola/2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
 
+  /cookie-es/0.5.0:
+    resolution: {integrity: sha512-RyZrFi6PNpBFbIaQjXDlFIhFVqV42QeKSZX1yQIl6ihImq6vcHNGMtqQ/QzY3RMPuYSkvsRwtnt5M9NeYxKt0g==}
+    dev: false
+
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
@@ -1137,7 +1143,7 @@ packages:
     dev: false
 
   /lodash._reinterpolate/3.0.0:
-    resolution: {integrity: sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=}
+    resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
     dev: false
 
   /lodash.template/4.5.0:
@@ -1536,6 +1542,7 @@ packages:
 
   /ufo/0.7.9:
     resolution: {integrity: sha512-6t9LrLk3FhqTS+GW3IqlITtfRB5JAVr5MMNjpBECfK827W+Vh5Ilw/LhTcHWrt6b3hkeBvcbjx4Ti7QVFzmcww==}
+    deprecated: 'security: please use latest version'
 
   /unbuild/0.5.11:
     resolution: {integrity: sha512-FR+9WwE5Y4XGdITr6dWplfmyXhFYuSF+GSd/ejuND144Uz6c2wwyxtUd+PUD9xAqMj4ZsahO1HjX/BSsgDtfVA==}

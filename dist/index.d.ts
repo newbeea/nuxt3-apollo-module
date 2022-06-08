@@ -1,9 +1,22 @@
 import * as _nuxt_schema from '@nuxt/schema';
 import { ApolloClientOptions } from '@apollo/client/core';
 
+declare type ClientConfig = Partial<ApolloClientOptions<any>> & {
+    authenticationType?: string;
+};
 interface ApolloModuleOptions {
-    default: Partial<ApolloClientOptions<any>>;
-    [name: string]: Partial<ApolloClientOptions<any>>;
+    [name: string]: ClientConfig | any;
+    default?: ClientConfig;
+    clientConfigs?: {
+        default: ClientConfig;
+        [name: string]: ClientConfig;
+    };
+    cookieAttributes?: {
+        expires?: number;
+        path?: string;
+        domain?: string;
+        secure?: boolean;
+    };
 }
 declare const _default: _nuxt_schema.NuxtModule<ApolloModuleOptions>;
 

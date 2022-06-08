@@ -1,7 +1,7 @@
 {
   "name": "@nuxt3/apollo-module",
-  "version": "0.0.9",
-  "description": "Nuxt module for Apollo client",
+  "version": "0.1.0",
+  "description": "Nuxt3 module for Apollo client",
   "keywords": [
     "nuxt",
     "nuxt3",
@@ -48,6 +48,7 @@
     "@nuxt/types": "^2.15.8",
     "@vue/apollo-composable": "^4.0.0-alpha.16",
     "consola": "^2.15.3",
+    "cookie-es": "^0.5.0",
     "pathe": "^0.2.0"
   },
   "devDependencies": {

@@ -9,9 +9,22 @@ import type {
 // @ts-expect-error #app resolved by Nuxt3
 import { NuxtApp } from '#app'
 
+type ClientConfig = Partial<ApolloClientOptions<any>> & {
+  authenticationType?: string
+}
 export interface ApolloModuleOptions {
-  default: Partial<ApolloClientOptions<any>>,
-  [name: string]: Partial<ApolloClientOptions<any>>
+  [name: string]: ClientConfig | any // <= 0.0.9
+  default?: ClientConfig // <= 0.0.9
+  clientConfigs?: { // > 0.0.9
+    default: ClientConfig
+    [name: string]: ClientConfig
+  }
+  cookieAttributes?: {
+    expires?: number
+    path?: string
+    domain?: string
+    secure?: boolean
+  }
 }
 export default defineNuxtModule<ApolloModuleOptions>({
   
