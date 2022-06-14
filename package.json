@@ -1,6 +1,6 @@
 {
   "name": "@nuxt3/apollo-module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nuxt3 module for Apollo client",
   "keywords": [
     "nuxt",
