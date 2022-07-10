@@ -1,6 +1,7 @@
 import { dirname, resolve } from "pathe";
 import { fileURLToPath } from "url";
 import { defineNuxtModule, addTemplate, addPluginTemplate } from '@nuxt/kit'
+import URI from 'urijs'
 
 import type {
   InMemoryCache,
@@ -14,6 +15,7 @@ type ClientConfig = Partial<ApolloClientOptions<any>> & {
 }
 export interface ApolloModuleOptions {
   [name: string]: ClientConfig | any // <= 0.0.9
+  serverUri?: string
   default?: ClientConfig // <= 0.0.9
   clientConfigs?: { // > 0.0.9
     default: ClientConfig
@@ -27,7 +29,7 @@ export interface ApolloModuleOptions {
   }
 }
 export default defineNuxtModule<ApolloModuleOptions>({
-  
+
   meta: {
     name: '@nuxt3/apollo-module',
     configKey: 'apollo',
@@ -38,13 +40,20 @@ export default defineNuxtModule<ApolloModuleOptions>({
 
     const __dirname__ = dirname(fileURLToPath(import.meta.url));
 
+    const server = nuxt.options.server
+    options.serverUri = options.serverUri ?? new URI({
+      protocol: server.https ? 'https' : 'http',
+      hostname: server.host,
+      port: server.port,
+    }).toString()
+
     // save options to apollo.options.mjs
     addTemplate({
       filename: 'apollo.options.mjs',
       getContents: () => `export default ${JSON.stringify(options)}`,
     })
 
-    // add apollo plugin ( see plugin.ts ) to server and client 
+    // add apollo plugin ( see plugin.ts ) to server and client
     addPluginTemplate({
       src: resolve(__dirname__, "./plugin.mjs"),
       mode: 'all'
