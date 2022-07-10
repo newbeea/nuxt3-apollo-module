@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@nuxt/schema": "npm:@nuxt/schema-edge@3.0.0-27338323.1e98259",
-    "unbuild": "0.5.11"
+    "unbuild": "0.5.11",
+    "urijs": "^1.19.11"
   }
 }
