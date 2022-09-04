@@ -49,6 +49,7 @@
     "@vue/apollo-composable": "^4.0.0-alpha.16",
     "consola": "^2.15.3",
     "cookie-es": "^0.5.0",
+    "defu": "^6.1.0",
     "pathe": "^0.2.0"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@apollo/client': ^3.5.6
@@ -8,6 +8,7 @@ specifiers:
   '@vue/apollo-composable': ^4.0.0-alpha.16
   consola: ^2.15.3
   cookie-es: ^0.5.0
+  defu: ^6.1.0
   pathe: ^0.2.0
   unbuild: 0.5.11
 
@@ -18,6 +19,7 @@ dependencies:
   '@vue/apollo-composable': 4.0.0-alpha.16_@apollo+client@3.5.6
   consola: 2.15.3
   cookie-es: 0.5.0
+  defu: 6.1.0
   pathe: 0.2.0
 
 devDependencies:
@@ -79,6 +81,8 @@ packages:
     resolution: {integrity: sha512-Gr86ujcNuPDnNOY8mi383Hvi8IYrJVJYuf3XcuBM/Dgd+bINn/7tHqsj+tKkoreMbmGsFLsltI/JJd8fOFWGDQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.0
     dev: false
 
   /@babel/types/7.16.0:
@@ -552,6 +556,12 @@ packages:
       tslib: 2.3.1
     dev: false
 
+  /acorn/8.8.0:
+    resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
+
   /ajv-keywords/3.5.2_ajv@6.12.6:
     resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
     peerDependencies:
@@ -716,6 +726,10 @@ packages:
 
   /defu/5.0.0:
     resolution: {integrity: sha512-VHg73EDeRXlu7oYWRmmrNp/nl7QkdXUxkQQKig0Zk8daNmm84AbGoC8Be6/VVLJEKxn12hR0UBmz8O+xQiAPKQ==}
+
+  /defu/6.1.0:
+    resolution: {integrity: sha512-pOFYRTIhoKujrmbTRhcW5lYQLBXw/dlTwfI8IguF1QCDJOcJzNH1w+YFjxqy6BAuJrClTy6MUE8q+oKJ2FLsIw==}
+    dev: false
 
   /destr/1.1.0:
     resolution: {integrity: sha512-Ev/sqS5AzzDwlpor/5wFCDu0dYMQu/0x2D6XfAsQ0E7uQmamIgYJ6Dppo2T2EOFVkeVYWjc+PCLKaqZZ57qmLg==}
@@ -1070,7 +1084,7 @@ packages:
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
 
   /is-glob/4.0.3:
@@ -1359,7 +1373,7 @@ packages:
       glob: 7.2.0
     dev: true
 
-  /rollup-plugin-dts/4.0.1_rollup@2.61.1+typescript@4.5.4:
+  /rollup-plugin-dts/4.0.1_jtn5vtyl2rn24tqnozjpmjvssy:
     resolution: {integrity: sha512-DNv5F8pro/r0Hkx3JWKRtJZocDnqXfgypoajeiaNq134rYaFcEIl/oas5PogD1qexMadVijsHyVko1Chig0OOQ==}
     engines: {node: '>=v12.22.6'}
     peerDependencies:
@@ -1373,7 +1387,7 @@ packages:
       '@babel/code-frame': 7.16.0
     dev: true
 
-  /rollup-plugin-esbuild/4.7.2_esbuild@0.13.15+rollup@2.61.1:
+  /rollup-plugin-esbuild/4.7.2_6jel4wgv6vpvqsh7nbxeogkepa:
     resolution: {integrity: sha512-rBS2hTedtG+wL/yyIWQ84zju5rtfF15gkaCLN0vsWGmBdRd0UPm52meAwkmrsPQf3mB/H2o+k9Q8Ce8A66SE5A==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -1496,6 +1510,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
+      acorn: 8.8.0
       commander: 2.20.3
       source-map: 0.6.1
       source-map-support: 0.5.21
@@ -1567,8 +1582,8 @@ packages:
       pretty-bytes: 5.6.0
       rimraf: 3.0.2
       rollup: 2.61.1
-      rollup-plugin-dts: 4.0.1_rollup@2.61.1+typescript@4.5.4
-      rollup-plugin-esbuild: 4.7.2_esbuild@0.13.15+rollup@2.61.1
+      rollup-plugin-dts: 4.0.1_jtn5vtyl2rn24tqnozjpmjvssy
+      rollup-plugin-esbuild: 4.7.2_6jel4wgv6vpvqsh7nbxeogkepa
       scule: 0.2.1
       typescript: 4.5.4
       untyped: 0.2.13
