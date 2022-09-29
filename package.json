@@ -43,16 +43,16 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.6",
-    "@nuxt/kit": "npm:@nuxt/kit-edge@3.0.0-27338323.1e98259",
+    "@apollo/client": "^3.6.9",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@^3.0.0-rc.12-27736489.2e080c2",
     "@nuxt/types": "^2.15.8",
-    "@vue/apollo-composable": "^4.0.0-alpha.16",
+    "@vue/apollo-composable": "4.0.0-alpha.19",
     "consola": "^2.15.3",
     "cookie-es": "^0.5.0",
     "pathe": "^0.2.0"
   },
   "devDependencies": {
-    "@nuxt/schema": "npm:@nuxt/schema-edge@3.0.0-27338323.1e98259",
-    "unbuild": "0.5.11"
+    "@nuxt/schema": "npm:@nuxt/schema-edge@^3.0.0-rc.12-27736489.2e080c2",
+    "unbuild": "0.8.11"
   }
 }
